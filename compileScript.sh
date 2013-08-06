@@ -1,3 +1,5 @@
+rm -rf src/
+cp -r /res/src .
 rm -rf sourceFromAST
 ~/bin/sbt clean
 echo "First compilation..."
