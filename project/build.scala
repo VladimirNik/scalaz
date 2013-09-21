@@ -66,7 +66,7 @@ object build extends Build {
       Seq("-sourcepath", bd.getAbsolutePath, "-doc-source-url", "https://github.com/scalaz/scalaz/tree/scalaz-seven€{FILE_PATH}.scala")
     },
     autoCompilerPlugins := true,
-    libraryDependencies += compilerPlugin("test.org" %% "printplugin" % "1.0"),
+    libraryDependencies += compilerPlugin("org.scala-lang.plugins" %% "printplugin" % "0.2.0"),
     scalacOptions += "-P:printplugin:oversrc",
     // retronym: I was seeing intermittent heap exhaustion in scalacheck based tests, so opting for determinism.
     parallelExecution in Test := false,
